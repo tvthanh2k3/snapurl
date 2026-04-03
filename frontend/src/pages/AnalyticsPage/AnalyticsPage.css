@@ -1,0 +1,108 @@
+.analytics-page {
+  min-height: calc(100vh - 64px);
+  padding: 2.5rem 0 4rem;
+}
+
+.analytics-page__back {
+  margin-bottom: 1.75rem;
+}
+
+.analytics-page__back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: 0.375rem 0.7rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+  margin-left: -0.7rem;
+}
+
+.analytics-page__back-link:hover {
+  color: var(--color-primary);
+  background: var(--color-primary-glow);
+}
+
+.analytics-page__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.analytics-page__title {
+  font-size: 1.875rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+.analytics-page__subtitle {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.375rem;
+}
+
+.analytics-page__code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.9em;
+  background: var(--color-surface-2);
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+}
+
+.analytics-page__refresh {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.spin-icon {
+  animation: spin 0.7s linear infinite;
+}
+
+.analytics-page__loader {
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.analytics-page__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.analytics-page__clicks {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.analytics-page__section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+@media (max-width: 560px) {
+  .analytics-page__header {
+    flex-direction: column;
+  }
+  .analytics-page__refresh {
+    width: 100%;
+    justify-content: center;
+  }
+}

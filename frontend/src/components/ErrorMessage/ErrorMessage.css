@@ -1,0 +1,40 @@
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.875rem 1rem;
+  background: var(--color-error-dim);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: var(--radius-md);
+  color: var(--color-error);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.error-message__icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.error-message__text {
+  flex: 1;
+  line-height: 1.4;
+}
+
+.error-message__dismiss {
+  background: none;
+  border: none;
+  color: var(--color-error);
+  cursor: pointer;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  padding: 0.125rem 0.25rem;
+  border-radius: 4px;
+  transition: opacity var(--transition);
+  flex-shrink: 0;
+}
+
+.error-message__dismiss:hover {
+  opacity: 1;
+  background: rgba(239, 68, 68, 0.15);
+}

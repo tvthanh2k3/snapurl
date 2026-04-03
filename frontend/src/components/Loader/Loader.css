@@ -1,0 +1,24 @@
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.loader__spinner {
+  display: inline-block;
+  border: 2.5px solid var(--color-border-2);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+.loader--sm .loader__spinner { width: 16px; height: 16px; }
+.loader--md .loader__spinner { width: 24px; height: 24px; }
+.loader--lg .loader__spinner { width: 40px; height: 40px; border-width: 3.5px; }
+
+.loader__text {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}

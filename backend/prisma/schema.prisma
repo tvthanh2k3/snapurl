@@ -1,0 +1,29 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Link {
+  id          String   @id @default(uuid())
+  originalUrl String
+  shortCode   String   @unique
+  createdAt   DateTime @default(now())
+  clicks      Int      @default(0)
+  
+  ClickEvents Click[]
+}
+
+model Click {
+  id        String   @id @default(uuid())
+  linkId    String
+  ipAddress String?
+  userAgent String?
+  country   String?
+  clickedAt DateTime @default(now())
+
+  Link      Link     @relation(fields: [linkId], references: [id], onDelete: Cascade)
+}

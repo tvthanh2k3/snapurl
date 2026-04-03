@@ -1,0 +1,40 @@
+.shorten-form__field {
+  display: flex;
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+.shorten-form__input {
+  flex: 1;
+  font-size: 1rem;
+  padding: 0.9375rem 1.25rem;
+}
+
+.shorten-form__input.input--error {
+  border-color: var(--color-error);
+  box-shadow: 0 0 0 3px var(--color-error-dim);
+}
+
+.shorten-form__btn {
+  padding: 0 1.75rem;
+  font-size: 0.9375rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.shorten-form__error {
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--color-error);
+  padding-left: 0.25rem;
+}
+
+@media (max-width: 560px) {
+  .shorten-form__field {
+    flex-direction: column;
+  }
+  .shorten-form__btn {
+    width: 100%;
+    padding: 0.875rem;
+  }
+}
